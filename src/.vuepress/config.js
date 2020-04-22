@@ -13,5 +13,5 @@ module.exports = {
         ]
     },
     dest: 'docs/',
-    base: '/vue-press/',
+    base: '/enger/',
 }
