@@ -8,10 +8,10 @@ module.exports = {
             },
             {
                 text: 'About',
-                link: '/about'
+                link: '/about/'
             }
         ]
     },
     dest: 'docs/',
-    base: '/',
+    base: '/enger/',
 }
