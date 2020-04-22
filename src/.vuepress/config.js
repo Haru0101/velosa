@@ -11,5 +11,7 @@ module.exports = {
                 link: '/enger/about'
             }
         ]
-    }
+    },
+    dest: 'docs/',
+    base: '/vue-press/',
 }
