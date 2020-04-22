@@ -4,11 +4,11 @@ module.exports = {
         sidebar: {},
         nav: [{
                 text: 'Home',
-                link: '/enger/'
+                link: '/'
             },
             {
                 text: 'About',
-                link: '/enger/about'
+                link: '/about'
             }
         ]
     },
