@@ -4,8 +4,8 @@
     "vuepress": "^1.4.1"
   },
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
     "eject": "vuepress eject",
     "deploy": "push-dir --dir=./.vuepress/dist --branch=gh-pages --cleanup"
   }
