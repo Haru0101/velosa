@@ -1,11 +1,6 @@
 ---
-title: テストドキュメント
-meta:
-  - name: description
-    content: テスト説明
+home: true
+heroText: Enger.
+footer: Copyright © 2020-present Haruki
 ---
 
-# テスト見出し1
-## テスト見出し2
-
-テスト説明

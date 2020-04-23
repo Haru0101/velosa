@@ -1,5 +1,6 @@
 module.exports = {
     title: 'Enger.',
+    description: 'UIとインタラクティブ表現を追求して',
     themeConfig: {
         sidebar: {},
         nav: [{
@@ -9,6 +10,10 @@ module.exports = {
             {
                 text: 'About',
                 link: '/about/'
+            },
+            {
+                text: 'Articles',
+                link: '/articles/'
             }
         ]
     },
