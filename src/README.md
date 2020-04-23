@@ -1,6 +1,7 @@
 ---
 home: true
+heroImage: /img/img_hero.jpg
 heroText: Enger.
-footer: Copyright Â© 2020-present Haruki
+footer: Copyright © 2020-present Haruki
 ---
 
