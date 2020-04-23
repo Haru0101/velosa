@@ -7,6 +7,6 @@
     "dev": "vuepress dev src",
     "build": "vuepress build src",
     "eject": "vuepress eject src",
-    "deploy": "push-dir --dir=./docs --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=./src --branch=gh-pages --cleanup"
   }
 }
