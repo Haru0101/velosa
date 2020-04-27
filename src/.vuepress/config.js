@@ -1,7 +1,8 @@
 module.exports = {
-    title: 'Enger.',
+    title: 'velosa',
     description: 'UIとインタラクティブ表現を追求して',
     themeConfig: {
+        logo: '/img/logo.png',
         sidebar: {},
         nav: [{
                 text: 'Home',
