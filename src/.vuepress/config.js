@@ -19,5 +19,5 @@ module.exports = {
         ]
     },
     dest: 'docs/',
-    base: '/enger/',
+    base: '/velosa/',
 }
