@@ -2,7 +2,7 @@ module.exports = {
     title: 'velosa',
     description: 'UIとインタラクティブ表現を追求して',
     themeConfig: {
-        logo: '/img/logo.png',
+        logo: '/img/img_logo.png',
         sidebar: {},
         nav: [{
                 text: 'Home',
