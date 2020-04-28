@@ -93,7 +93,14 @@ function css(el, property) {
   return win.getComputedStyle(el, null)[property];
 }
 </script>
-
+<style lang="scss">
+.navbar {
+  background-color: #fcfbfa;
+  .links {
+      background-color: #fcfbfa;
+  }
+}
+</style>
 <style lang="stylus">
 $navbar-vertical-padding = 0.7rem;
 $navbar-horizontal-padding = 1.5rem;
@@ -123,7 +130,6 @@ $navbar-horizontal-padding = 1.5rem;
   .links {
     padding-left: 1.5rem;
     box-sizing: border-box;
-    background-color: white;
     white-space: nowrap;
     font-size: 0.9rem;
     position: absolute;
