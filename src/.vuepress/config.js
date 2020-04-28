@@ -1,6 +1,6 @@
 module.exports = {
     title: 'velosa',
-    description: 'UIとインタラクティブ表現を追求して',
+    description: 'UIとインタラクティブな表現を追求するメディア',
     head: [
         ['link', {
             rel: 'icon',
