@@ -9,7 +9,7 @@ module.exports = {
     ],
     themeConfig: {
         logo: '/img/img_logo.png',
-        sidebar: {},
+        sidebar: 'auto',
         nav: [{
                 text: 'Home',
                 link: '/'
@@ -20,7 +20,17 @@ module.exports = {
             },
             {
                 text: 'Articles',
-                link: '/articles/'
+                link: '/articles/',
+                items: [
+                    {
+                        text: 'CSS',
+                        link: '/articles/css/'
+                    },
+                    {
+                        text: 'JavaScript',
+                        link: '/articles/javascript/'
+                    },
+                ]
             }
         ]
     },
