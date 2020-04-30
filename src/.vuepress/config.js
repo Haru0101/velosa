@@ -20,17 +20,7 @@ module.exports = {
             },
             {
                 text: 'Articles',
-                link: '/articles/',
-                items: [
-                    {
-                        text: 'CSS',
-                        link: '/articles/css/'
-                    },
-                    {
-                        text: 'JavaScript',
-                        link: '/articles/javascript/'
-                    },
-                ]
+                link: '/articles/'
             }
         ]
     },
