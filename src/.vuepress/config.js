@@ -3,7 +3,7 @@ module.exports = {
     description: 'UIとインタラクティブな表現を追求するメディア',
     locales: {
         '/': {
-            lang: 'ja'
+            lang: 'ja-JP'
         }
     },
     plugins: [
