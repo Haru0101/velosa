@@ -25,10 +25,6 @@ module.exports = {
             {
                 text: 'About',
                 link: '/about/'
-            },
-            {
-                text: 'Articles',
-                link: '/articles/'
             }
         ]
     },
