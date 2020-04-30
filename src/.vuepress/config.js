@@ -1,6 +1,14 @@
 module.exports = {
     title: 'velosa',
     description: 'UIとインタラクティブな表現を追求するメディア',
+    locales: {
+        '/': {
+            lang: 'ja'
+        }
+    },
+    plugins: [
+        "@vuepress/blog"
+    ],
     head: [
         ['link', {
             rel: 'icon',

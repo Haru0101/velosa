@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@vuepress/plugin-blog": "^1.0.0-alpha.49",
     "push-dir": "^0.4.1",
     "vuepress": "^1.4.1"
   },
@@ -8,5 +9,9 @@
     "build": "vuepress build src",
     "eject": "vuepress eject src",
     "deploy": "push-dir --dir=./docs --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "node-sass": "^4.14.0",
+    "sass-loader": "^8.0.2"
   }
 }

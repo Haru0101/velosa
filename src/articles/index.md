@@ -1,1 +1,13 @@
-## 記事一覧
+## Articles List  
+
+<Articles></Articles>
+
+
+<script>
+import Articles from '../.vuepress/theme/components/Articles';
+export default {
+    components: {
+        Articles
+    }
+}
+</script>
