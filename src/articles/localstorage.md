@@ -47,7 +47,7 @@ localStorage['key'] = 'value';
 ```
 
 ### データを取得する方法  
-保存するのがsetItemなら、取得するのはgetItemです。  
+保存するのが`setItem`なら、取得するのは`getItem`です。  
 ```js
 localStorage.getitem('key');
 ```
@@ -60,7 +60,7 @@ localStoragep['key'];
 ```
 
 ### データを削除する方法  
-保存がset、取得がget、となると削除はremoveです。  
+保存が`setItem`、取得が`getItem`、となると削除は`removeItem`です。  
 ```js
 localStorage.removeItem('key');
 ```
@@ -73,7 +73,7 @@ delete localStorage.key;
 delete localStorage['key'];
 ```
 
-キーを指定せず、全部消してしまいたいときはclearしてしまいましょう。  
+キーを指定せず、全部消してしまいたいときは`clear`してしまいましょう。  
 ```js
 localStorage.clear();
 ```
