@@ -56,7 +56,7 @@ console.log(storage.favoriteList);
 と正しく出力されます。  
 
 ## localStorageに保存されたデータをすべて取り出す  
-すべて取り出すためには、for文を使用する必要があります。  
+すべてのvalueを取り出すためには、for文を使用する必要があります。  
 
 ```js
 // 2つのデータをセットしてみる
