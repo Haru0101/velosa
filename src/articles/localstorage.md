@@ -39,6 +39,13 @@ localStorage.setItem('key', 'value');
 こうやってデータを保存します。  
 必ずキー：値の形になるのが特徴です。  
 
+また、以下のような形でも保存できます。  
+
+```  
+localStorage.key = 'value';
+```  
+
+
 ### データを取得する方法  
 保存するのがsetItemなら、取得するのはgetItemです。  
 ```
