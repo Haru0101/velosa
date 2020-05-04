@@ -36,8 +36,8 @@ JSON形式のデータは文字列に変換する必要があります。
 
 ```js
 const favoriteList = {
-    'John': 'apples',
-    'Michael': 'lemons'
+    "John": "apples",
+    "Michael": "lemons"
 };
 
 const storage = localStorage;
@@ -48,11 +48,45 @@ console.log(storage.favoriteList);
 ```
 
 `JSON.stringify`はJSON形式のデータを文字列へ変換する際に使用します。  
+こうして文字列に変換するとconsoleには、  
 
+```
+"{'John':'apples','Michael':'lemons'}"
+```
+と正しく出力されます。  
 
+## localStorageに保存されたデータをすべて取り出す  
+すべて取り出すためには、for文を使用する必要があります。  
 
-## 
+```js
+// 2つのデータをセットしてみる
+localStorage.setItem('John','apples');
+localStorage.setItem('Michael','lemons');
 
-## 
+// for文ですべてのデータを取り出す
+let keyName;
+for(let i = 0; i < localStorage.length; i++){
+    keyName = localStorage.key(i);
+    console.log(localStorage.getItem(keyName));
+}
+```
 
-## 
+`localStorage.key(i)`でそのインデックス番号のkey名が取得できます。  
+なので、それを代入したkeyNameを引数（`localStorage.getItem(keyName);`）にすれば、  
+取得できるわけです。  
+
+出力されるデータは以下の通り。  
+```
+"apples"
+"lemons"
+```
+
+## まとめ  
+前回よりもより実践的な内容をまとめてみました。  
+localStorageはWebStorageの種類の1つです。  
+次はもう一方のsessionStorageについてもまとめてみたいと思います。  
+
+といってもsessionStorageはlocalStorageと非常によく似ているので、  
+localStorageの基本的な使い方を理解していれば簡単に利用できるようになると思います。  
+
+また次回もお楽しみに！  
