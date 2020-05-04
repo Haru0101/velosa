@@ -33,7 +33,7 @@ Cookieはサーバにリクエストするたびにデータを自動で送信�
 
 ### データを保存する方法  
 超シンプルです。  
-```
+```js
 localStorage.setItem('key', 'value');
 ```
 こうやってデータを保存します。  
@@ -41,26 +41,25 @@ localStorage.setItem('key', 'value');
 
 また、以下のような形でも保存できます。  
 
-```  
+```js
 localStorage.key = 'value';
-```  
-
+```
 
 ### データを取得する方法  
 保存するのがsetItemなら、取得するのはgetItemです。  
-```
+```js
 localStorage.getitem('key');
 ```
 
 ### データを削除する方法  
 保存がset、取得がget、となると削除はremoveです。  
-```
+```js
 localStorage.removeItem('key');
 ```
 これで指定したキーの値を削除することができます。  
 
 キーを指定せず、全部消してしまいたいときはclearしてしまいましょう。  
-```
+```js
 localStorage.clear();
 ```
 
