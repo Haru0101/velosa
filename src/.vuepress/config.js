@@ -26,7 +26,8 @@ module.exports = {
                 text: 'About',
                 link: '/about/'
             }
-        ]
+        ],
+        lastUpdated: 'Last Updated'
     },
     dest: 'docs/',
     base: '/velosa/',
