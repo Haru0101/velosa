@@ -7,7 +7,13 @@ module.exports = {
         }
     },
     plugins: [
-        "@vuepress/blog"
+        "@vuepress/blog",
+        [
+            '@vuepress/google-analytics',
+            {
+              'ga': 'UA-136957501-2'
+            }
+          ]
     ],
     head: [
         ['link', {
