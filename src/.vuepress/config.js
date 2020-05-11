@@ -1,6 +1,6 @@
 module.exports = {
     title: 'velosa',
-    description: 'UIとインタラクティブな表現を追求するメディア',
+    description: 'シンプル && わかりやすく',
     locales: {
         '/': {
             lang: 'ja-JP'
