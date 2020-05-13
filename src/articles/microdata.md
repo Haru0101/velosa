@@ -11,12 +11,21 @@ HTMLのタグの中に組み込むのが特徴で、
 [リンクテキスト](リンクURL)  
 
 ## Microdataの文法  
-
-### itemprop  
+では早速Microdataの書き方を見ていきましょう。  
 
 ### itemscope  
 
 ### itemtype  
+itemtypeには以降に出てくるアイテムの種別が定義されたファイルを指定します。  
+いわば、『仕様が書かれたページの指定』です。  
+どの仕様を使用するかは自由ですが、もっともポピュラーなのがSchema.orgです。  
+
+
+### itemprop  
+
+### itemid  
+
+### itemref  
 
 ### content  
 
