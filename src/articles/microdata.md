@@ -71,7 +71,25 @@ author（著者）やname（名前）、genre（分野）など、
 
 
 ### itemid  
+書きたいモノの、『固有の品番やID』などを指定します。  
+今回は書籍なので、ISBN番号というのがあります。  
+これはその書籍に割り振られたIDとなるので、他の書籍のIDとかぶることはありません。  
+完全にユニーク、一意なIDです。  
 
+これを、URNまたはURLと一緒に記します。  
+URNはUniform Resource Nameの略で、これもまた、固有の品番やIDといった意味を持ちます。  
+
+itemidはitemscopeやitemtypeと同じ要素に指定します。  
+というか、そこ以外に指定できません。  
+
+```html
+<div itemscope itemtype="https://schema.org/Book" itemid="urn:isbn:978-4101006055">
+    <h2 itemprop="name">人間失格</h2>
+    <p itemprop="author">太宰治</p>
+    <p itemporp="genre">中編小説</p>
+    <p itemprop="datePublished">1948年</p>
+</div>
+```
 
 ### itemref  
 
