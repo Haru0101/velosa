@@ -60,18 +60,18 @@ author（著者）やname（名前）、genre（分野）など、
     <h2 itemprop="name">人間失格</h2>
     <p itemprop="author">太宰治</p>
     <p itemporp="genre">中編小説</p>
+    <p itemprop="datePublished">1948年</p>
 </div>
 ```
 
-```html
+そんなに本は読まないので、大して太宰治についても知りませんが、  
+とりあえず有名なので例として用いてみました。  
 
-```
+これで各項目が何について書かれているか、Googleも判断しやすいですね。  
+
 
 ### itemid  
 
-```html
-
-```
 
 ### itemref  
 
