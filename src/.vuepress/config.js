@@ -1,6 +1,6 @@
 module.exports = {
     title: 'velosa',
-    description: 'シンプル && わかりやすく',
+    description: 'Simple && Easy',
     locales: {
         '/': {
             lang: 'ja-JP'
