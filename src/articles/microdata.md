@@ -98,7 +98,7 @@ itemidはitemscopeやitemtypeと同じ要素に指定します。
 これはよく`itemscope`外のアイテムを関連付けする際に用いられます。  
 
 ```html
-<div itemscope itemtype="https://schema.org/Book" itemid="urn:isbn:978-4101006055" itemref="a b">
+<div itemscope itemtype="https://schema.org/Book" itemid="urn:isbn:978-4101006055" itemref="a">
     <h2 itemprop="name">人間失格</h2>
     <p itemprop="author">太宰治</p>
     <p itemporp="genre">中編小説</p>
@@ -108,15 +108,8 @@ itemidはitemscopeやitemtypeと同じ要素に指定します。
     <h2 itemprop="name">斜陽日記</h2>
     <p itemprop="author">太田静子</p>
 </div>
-<div id="b">
-
-</div>
 ```
 
-### content  
+太宰治の人間失格の関連項目ってなんだろうって考えたら、  
+太宰の愛人の太田静子しか浮かびませんでした。  
 
-```html
-
-```
-
-## まとめ  
