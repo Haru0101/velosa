@@ -49,7 +49,7 @@ console.log(title);
 まさかの`[object HTMLCollection]`。  
 
 そうなんです。  
-getElementsByClassNameはそのままでは正しく出力できません。  
+`getElementsByClassName`はそのままでは正しく出力できません。  
 
 すべてを出力するためには以下のようにfor文で回して出力します。  
 ```javascript
@@ -62,8 +62,8 @@ for ( let i = 0; i < title.length; i ++ ){
 "<div class='title'>恐怖の谷</div>"
 ```
 
-補足ですが、getElementsByClassNameは、『Elements』と複数形になっていることに注意してくださいね。  
+補足ですが、`getElementsByClassName`は、『Elements』と複数形になっていることに注意してくださいね。  
 
 ## まとめ  
-基本的にgetElementByIdの使用頻度が高いと思いますが、  
-getElementsByClassNameを使用する際はfor文で回すのを忘れずに…！  
+基本的に`getElementById`の使用頻度が高いと思いますが、  
+`getElementsByClassName`を使用する際はfor文で回すのを忘れずに…！  
