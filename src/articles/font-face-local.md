@@ -43,7 +43,7 @@ ttfなら`truetype`です。
 他にも`opentype`、`embedded-opentype`、`svg`などがあります。  
 詳しくはMDN web docsを御覧ください。  
 
-https://developer.mozilla.org/ja/docs/Web/CSS/@font-face  
+[MDN web docs](https://developer.mozilla.org/ja/docs/Web/CSS/@font-face)  
 
 ## まとめ  
 ローカルのフォントを読み込むのは非常に簡単です。  
