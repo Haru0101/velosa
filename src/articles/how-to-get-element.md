@@ -1,6 +1,6 @@
 # getElementById、getElementsByClassNameの違いとは  
 DOM操作の基本、要素の取得方法ですが、  
-getElementById、getElementByClassName、getElementsByClassNameの3つが代表的なんじゃないでしょうか。  
+`getElementById`、`getElementsByClassName`の2つが代表的なんじゃないでしょうか。  
 でもそれぞれ微妙に挙動が違うので、  
 それを今回は検証していきたいと思います。  
 
