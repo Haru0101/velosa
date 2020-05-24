@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JavaScriptで日付を比較する方法 | velosa</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/velosa/img/favicon.png">
+    <meta name="description" content="Simple && Easy">
+    <link rel="preload" href="/velosa/assets/css/0.styles.4914bf78.css" as="style"><link rel="preload" href="/velosa/assets/js/app.b4ae60e0.js" as="script"><link rel="preload" href="/velosa/assets/js/2.98d68e92.js" as="script"><link rel="preload" href="/velosa/assets/js/3.8a971e73.js" as="script"><link rel="preload" href="/velosa/assets/js/12.2b9174ed.js" as="script"><link rel="prefetch" href="/velosa/assets/js/10.254c0f41.js"><link rel="prefetch" href="/velosa/assets/js/11.23addfbc.js"><link rel="prefetch" href="/velosa/assets/js/13.cff76a14.js"><link rel="prefetch" href="/velosa/assets/js/14.b2f0418f.js"><link rel="prefetch" href="/velosa/assets/js/15.b250e342.js"><link rel="prefetch" href="/velosa/assets/js/16.f9a5a1c5.js"><link rel="prefetch" href="/velosa/assets/js/17.fd9a5aa6.js"><link rel="prefetch" href="/velosa/assets/js/18.2e3d58ec.js"><link rel="prefetch" href="/velosa/assets/js/19.9ccd80bd.js"><link rel="prefetch" href="/velosa/assets/js/20.ee08833d.js"><link rel="prefetch" href="/velosa/assets/js/21.64602607.js"><link rel="prefetch" href="/velosa/assets/js/22.c32d48bc.js"><link rel="prefetch" href="/velosa/assets/js/23.ac9405fe.js"><link rel="prefetch" href="/velosa/assets/js/24.f40c74df.js"><link rel="prefetch" href="/velosa/assets/js/4.c6393ef9.js"><link rel="prefetch" href="/velosa/assets/js/5.d4637f21.js"><link rel="prefetch" href="/velosa/assets/js/6.98a4fb2d.js"><link rel="prefetch" href="/velosa/assets/js/7.03c60eff.js"><link rel="prefetch" href="/velosa/assets/js/8.d10f4c7d.js"><link rel="prefetch" href="/velosa/assets/js/9.e7c7df44.js">
+    <link rel="stylesheet" href="/velosa/assets/css/0.styles.4914bf78.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/velosa/" class="home-link router-link-active"><img src="/velosa/img/img_logo.png" alt="velosa" class="logo"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/velosa/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/velosa/about/" class="nav-link">
+  About
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/velosa/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/velosa/about/" class="nav-link">
+  About
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>JavaScriptで日付を比較する方法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/velosa/articles/javascript/compare-dates.html#実装方法" class="sidebar-link">実装方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/velosa/articles/javascript/compare-dates.html#new-date-の形にして比較する" class="sidebar-link">new Date()の形にして比較する</a></li><li class="sidebar-sub-header"><a href="/velosa/articles/javascript/compare-dates.html#新しい日付のほうが大きい判定になる" class="sidebar-link">新しい日付のほうが大きい判定になる</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="javascriptで日付を比較する方法"><a href="#javascriptで日付を比較する方法" class="header-anchor">#</a> JavaScriptで日付を比較する方法</h1> <p>『6月からお知らせを掲載する』とか、<br>
+『登録日から1週間だけ送料を無料にする』とか。<br>
+ある一定の日を過ぎたら処理を起こしたいとき、日付の比較ってよく使いますよね。</p> <p>今回はその実装方法を紹介します。</p> <h2 id="実装方法"><a href="#実装方法" class="header-anchor">#</a> 実装方法</h2> <h3 id="new-date-の形にして比較する"><a href="#new-date-の形にして比較する" class="header-anchor">#</a> new Date()の形にして比較する</h3> <p>日付の比較は、new Date()の形で行いましょう。<br>
+そうでないとうまく計算されません。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 今日のタイムスタンプ</span>
+<span class="token keyword">const</span> today <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Mon Jun 22 2020 00:00:00 GMT+0900 (日本標準時)</span>
+<span class="token keyword">const</span> deadline <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token number">2020</span><span class="token punctuation">,</span> <span class="token number">05</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>今日の日付は<code>new Date(Date.now)</code>。<br>
+そして、比較対象となる日（今回は締切日）は、直接<code>new Date()</code>につっこんでいきます。<br>
+ただし、月は0はじまりなので6月としたい場合は『5』を入力してくださいね。</p> <h3 id="新しい日付のほうが大きい判定になる"><a href="#新しい日付のほうが大きい判定になる" class="header-anchor">#</a> 新しい日付のほうが大きい判定になる</h3> <p>if文で比較して分岐する場合、<br>
+どっちが大きくなるのか気になりますよね。</p> <p>日付の場合は、『新しいほど大きい』という判定になります。</p> <p>なので今回であればif文は以下のようになります。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 今日のタイムスタンプ</span>
+<span class="token keyword">const</span> today <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Mon Jun 22 2020 00:00:00 GMT+0900 (日本標準時)</span>
+<span class="token keyword">const</span> deadline <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token number">2020</span><span class="token punctuation">,</span> <span class="token number">05</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span><span class="token punctuation">(</span>today <span class="token operator">&gt;</span> deadline<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'締切日を過ぎています。'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'締切日はまだ過ぎていません。'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/velosa/assets/js/app.b4ae60e0.js" defer></script><script src="/velosa/assets/js/2.98d68e92.js" defer></script><script src="/velosa/assets/js/3.8a971e73.js" defer></script><script src="/velosa/assets/js/12.2b9174ed.js" defer></script>
+  </body>
+</html>
