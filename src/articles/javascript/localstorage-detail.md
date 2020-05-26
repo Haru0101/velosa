@@ -9,7 +9,7 @@ description: 前回はローカルストレージについて、簡単にまと�
 前回はローカルストレージについて、簡単にまとめています。  
 今回の詳しい内容に入る前に、前の記事でローカルストレージのあらましを学ぶことをオススメします。  
 
-[ちょっとしたデータの保存に！ローカルストレージの基本的な使い方](https://haru0101.github.io/velosa/articles/localstorage.html)  
+[ちょっとしたデータの保存に！ローカルストレージの基本的な使い方](https://haru0101.github.io/velosa/articles/javascript/localstorage.html)  
 
 ## オブジェクトを格納したいとき  
 これ、簡単なように思えてちょっと工夫が必要なんです。  
