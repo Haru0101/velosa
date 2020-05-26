@@ -56,7 +56,7 @@ localStorage.getItem('key');
 
 ```js
 localStorage.key;
-localStoragep['key'];
+localStorage['key'];
 ```
 
 ### データを削除する方法  
