@@ -51,7 +51,7 @@
     .category {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 80px;
+        margin-top: 100px;
         width: 100%;
         justify-content: space-between;
 
