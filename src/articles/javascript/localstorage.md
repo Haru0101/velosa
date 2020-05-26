@@ -49,7 +49,7 @@ localStorage['key'] = 'value';
 ### データを取得する方法  
 保存するのが`setItem`なら、取得するのは`getItem`です。  
 ```js
-localStorage.getitem('key');
+localStorage.getItem('key');
 ```
 
 また、以下のような形でも取得できます。  
