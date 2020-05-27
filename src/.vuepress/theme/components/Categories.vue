@@ -34,5 +34,8 @@
     }
     a {
         color: unset;
+        &:hover {
+            opacity: 0.8;
+        }
     }
 </style>
