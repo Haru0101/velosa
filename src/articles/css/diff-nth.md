@@ -12,6 +12,21 @@
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+```html
+<div>
+  <h2>芥川龍之介</h2>
+  <p>蜘蛛の糸</p>
+  <h2>坂口安吾</h2>
+  <p>桜の森の満開の下</p>
+</div>
+```
+
+```css
+h2:first-child {
+  color: red;
+}
+```
+
 これだと何も問題なく最初のh2要素が赤色になってますよね。  
 しかし、問題は次です。  
 
@@ -21,6 +36,22 @@
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+```html
+<div>
+  <h1>文豪紹介</h1>
+  <h2>芥川龍之介</h2>
+  <p>蜘蛛の糸</p>
+  <h2>坂口安吾</h2>
+  <p>桜の森の満開の下</p>
+</div>
+```
+
+```css
+h2:first-child {
+  color: red;
+}
+```
 
 h1が追加され、h2が一番最初の子要素ではなくなった途端、  
 CSSが効かなくなりました。  
@@ -38,6 +69,22 @@ CSSが効かなくなりました。
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+```html
+<div>
+  <h1>文豪紹介</h1>
+  <h2>芥川龍之介</h2>
+  <p>蜘蛛の糸</p>
+  <h2>坂口安吾</h2>
+  <p>桜の森の満開の下</p>
+</div>
+```
+
+```css
+h2:first-of-type {
+  color: red;
+}
+```
+
 ## :last-childと:last-of-typeの違い  
 となると、`:last-child`と`:last-of-type`も同様です。  
 
@@ -48,6 +95,20 @@ CSSが効かなくなりました。
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+```html
+<div>
+  <h1>文豪紹介</h1>
+  <h2>芥川龍之介</h2>
+  <h2>坂口安吾</h2>
+</div>
+```
+
+```css
+h2:last-child {
+  color: red;
+}
+```
 指定したh2が最後の子要素ならCSSが適用されますが、  
 
 <p class="codepen" data-height="376" data-theme-id="light" data-default-tab="result" data-user="haru0101" data-slug-hash="abvPgxq" style="height: 376px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="abvPgxq">
@@ -56,6 +117,22 @@ CSSが効かなくなりました。
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+```html
+<div>
+  <h1>文豪紹介</h1>
+  <h2>芥川龍之介</h2>
+  <p>蜘蛛の糸</p>
+  <h2>坂口安吾</h2>
+  <p>桜の森の満開の下</p>
+</div>
+```
+
+```css
+h2:last-child {
+  color: red;
+}
+```
 h2が最後の子要素でなければ適用されません。  
 
 ### :last-of-type  
@@ -65,6 +142,22 @@ h2が最後の子要素でなければ適用されません。
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+```html
+<div>
+  <h1>文豪紹介</h1>
+  <h2>芥川龍之介</h2>
+  <p>蜘蛛の糸</p>
+  <h2>坂口安吾</h2>
+  <p>桜の森の満開の下</p>
+</div>
+```
+
+```css
+h2:last-of-type {
+  color: red;
+}
+```
 
 `:last-of-type`なら、h2の中で一番最後の要素にCSSを適用するのでバッチリです。  
 
