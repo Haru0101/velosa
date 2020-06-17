@@ -47,33 +47,42 @@ p::after {
 ### 例2：ボタンデザイン  
 
 ### 例3：吹き出し  
-
-
-
-### その他：補足情報
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css" data-user="haru0101" data-slug-hash="MWKbJpO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="MWKbJpO">
-  <span>See the Pen <a href="https://codepen.io/haru0101/pen/MWKbJpO">
-  MWKbJpO</a> by Haru (<a href="https://codepen.io/haru0101">@haru0101</a>)
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haru0101" data-slug-hash="ZEQBLmR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ZEQBLmR">
+  <span>See the Pen <a href="https://codepen.io/haru0101/pen/ZEQBLmR">
+  ZEQBLmR</a> by Haru (<a href="https://codepen.io/haru0101">@haru0101</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ```html
-<ul>
-  <li>HTML</li>
-  <li >CSS</li>
-  <li class="new">JavaScript</li>
-</ul>
+<div class="baloonWrap">
+    <p class="baloonText">
+    吹き出しどす〜
+    </p>
+</div>
 ```
 
 ```css
-li.new::after {
-  content: 'NEW';
-  border: 1px solid red;
-  background-color: yellow;
-  padding: 5px;
-  margin-left: 6px;
-  font-size: 12px;
+.baloonWrap {
+    position: relative;
+    padding: 10px 20px;
+    background-color: skyblue;
+    border-radius: 10px;
+    width: 200px;
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.baloonText::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    margin-top: -10px;
+    border: 10px solid transparent;
+    border-right: 15px solid skyblue;
+    z-index:20;
 }
 ```
 
