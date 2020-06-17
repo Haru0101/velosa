@@ -79,6 +79,9 @@ p::after {
 }
 ```
 
+本来は『>』などはFont Awesome Iconsなどで表現しますが、  
+今回はbefore・after要素の解説なのでわかりやすく直接『>』を使っています。  
+
 ### 例2：吹き出し  
 <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haru0101" data-slug-hash="ZEQBLmR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ZEQBLmR">
   <span>See the Pen <a href="https://codepen.io/haru0101/pen/ZEQBLmR">
