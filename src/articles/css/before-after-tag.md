@@ -16,20 +16,68 @@ HTML要素に付随した形で使われます。
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+```html
+<p>1,000</p>
+```
+
+```css
+p::after {
+    content:'円';
+}
+```
+
 通常このような使い方はしませんが、わかりやすい例として掲載します。  
 上の例では、pタグの後の要素として単位の『円』をつけています。  
+
+とりわけ、覚えていてほしいのは、contentプロパティは使っても使わなくても書いてください。  
+中身が無いときは`content: '';`と書いてください。  
+
+なぜなら、before、after要素はこのcontentプロパティがないと動かないからです。  
 
 ### だけどウェブ制作には必須の要素  
 リストマーカーやボタンデザインなど、あらゆる場面でbefore、after要素は使われます。  
 また、それらを習得すればまるでGIF動画のような複雑な動きや形をした高度なスタイルを実現したいときも柔軟に対応できます。  
 
 ## 具体的なbefore、after要素の使い方  
-文章の説明だけではわかりにくいと思うので、実際の使われ方を見てみましょう。  
+文章の説明だけではわかりにくいと思うので、実際の使い方を見てみましょう。  
 
 ### 例1：リストマーカー  
+
 
 ### 例2：ボタンデザイン  
 
 ### 例3：吹き出し  
+
+
+
+### その他：補足情報
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css" data-user="haru0101" data-slug-hash="MWKbJpO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="MWKbJpO">
+  <span>See the Pen <a href="https://codepen.io/haru0101/pen/MWKbJpO">
+  MWKbJpO</a> by Haru (<a href="https://codepen.io/haru0101">@haru0101</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+```html
+<ul>
+  <li>HTML</li>
+  <li >CSS</li>
+  <li class="new">JavaScript</li>
+</ul>
+```
+
+```css
+li.new::after {
+  content: 'NEW';
+  border: 1px solid red;
+  background-color: yellow;
+  padding: 5px;
+  margin-left: 6px;
+  font-size: 12px;
+}
+```
+
+補足情報として『NEW』の表示をつけるときなどにも使えます。  
+
 
 ## まとめ  
