@@ -41,12 +41,45 @@ p::after {
 ## 具体的なbefore、after要素の使い方  
 文章の説明だけではわかりにくいと思うので、実際の使い方を見てみましょう。  
 
-### 例1：リストマーカー  
+### 例1：ボタンデザイン  
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haru0101" data-slug-hash="rNxWyBo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="rNxWyBo">
+  <span>See the Pen <a href="https://codepen.io/haru0101/pen/rNxWyBo">
+  rNxWyBo</a> by Haru (<a href="https://codepen.io/haru0101">@haru0101</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+```html
+<button class="submitButton" value="送信">送信</button>
+```
 
-### 例2：ボタンデザイン  
+```css
+.submitButton {
+  position: relative;
+  width: 120px;
+  height: 60px;
+  background-color: white;
+  border: 4px double #333;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
-### 例3：吹き出し  
+.submitButton::after {
+  content: '>';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+.submitButton:hover{
+  background-color: black;
+  color: white;
+  transition: 0.3s all;
+}
+```
+
+### 例2：吹き出し  
 <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haru0101" data-slug-hash="ZEQBLmR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ZEQBLmR">
   <span>See the Pen <a href="https://codepen.io/haru0101/pen/ZEQBLmR">
   ZEQBLmR</a> by Haru (<a href="https://codepen.io/haru0101">@haru0101</a>)
@@ -86,6 +119,32 @@ p::after {
 }
 ```
 
+### その他：補足情報
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haru0101" data-slug-hash="MWKbJpO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="MWKbJpO">
+  <span>See the Pen <a href="https://codepen.io/haru0101/pen/MWKbJpO">
+  MWKbJpO</a> by Haru (<a href="https://codepen.io/haru0101">@haru0101</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+```html
+<ul>
+  <li>HTML</li>
+  <li >CSS</li>
+  <li class="new">JavaScript</li>
+</ul>
+```
+
+```css
+li.new::after {
+    content: 'NEW';
+    border: 1px solid red;
+    background-color: yellow;
+    padding: 5px;
+    margin-left: 6px;
+    font-size: 12px;
+}
+```
 補足情報として『NEW』の表示をつけるときなどにも使えます。  
 
 
