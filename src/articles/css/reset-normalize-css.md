@@ -47,12 +47,28 @@ marginとかpaddingとか全部0です。
 私はこのReset CSSをもとにカスタムしたものをよく使用します。  
 
 ## normalize.cssとは  
+次がnormalize.css。  
+reset.cssと違う点は、実用性のあるスタイルは残しておくということです。  
+reset.cssがすべての余白や、フォントサイズをリセットしたのに対し、  
+normalize.cssはある程度スタイルを残し、  
+プレーンなHTMLでもそれなりの見た目になるように調整します。  
 
+以下がnormalize.cssをあてた状態です。  
 
+#### Google Chrome  
+![Google Chrome](/img/img-article/chrome_normalize.png)  
 
-### ブラウザ間の違いを調整する  
+#### Safari  
+![Safari](/img/img-article/safari_normalize.png)  
+
+ガッツリスタイル残ってます。  
+
+### よく使われているnormalize.cssはコチラ  
+[Normalize.css](https://necolas.github.io/normalize.css/)  
+
 
 ## sanitize.cssとは  
+
 
 ### ブラウザ間の違いを調整しつつ、よくある補正も含まれている  
 
