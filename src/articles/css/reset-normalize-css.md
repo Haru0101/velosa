@@ -70,6 +70,8 @@ normalize.cssはある程度スタイルを残し、
 ## sanitize.cssとは  
 
 
-### ブラウザ間の違いを調整しつつ、よくある補正も含まれている  
+### よく使われているsanitize.cssはコチラ  
+[sanitize.css](https://csstools.github.io/sanitize.css/)  
+よく使われているってほど、普及はしてないけども。  
 
 ## まとめ  
