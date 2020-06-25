@@ -28,7 +28,7 @@
     <tr>
         <th>インライン要素</th>
         <td>×</td>
-        <td>×</td>
+        <td>○</td>
         <td>×</td>
     </tr>
     <tr>
