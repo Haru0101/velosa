@@ -6,8 +6,27 @@
 今回はそのHTMLのバリデーションについてまとめてみました。  
 
 ## HTMLのバリデーション  
+それぞれ入力エリアと送信ボタンを設置しているので、  
+実際に入力したり、ボタンを押してみたりしてください。  
 
 ### require：必須項目の設定  
+<p class="codepen" data-height="204" data-theme-id="light" data-default-tab="html,result" data-user="haru0101" data-slug-hash="jOWGLPj" style="height: 204px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="jOWGLPj">
+  <span>See the Pen <a href="https://codepen.io/haru0101/pen/jOWGLPj">
+  jOWGLPj</a> by Haru (<a href="https://codepen.io/haru0101">@haru0101</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+```html
+<form>
+  <input type="text" required>
+  <button>送信</button>
+</form>
+```
+
+テキスト入力エリアが空の場合、  
+送信できないようにメッセージが出ます。（実際に空の状態でボタンを押してみてください！）  
+また、未入力のままフォームを送信することはできません。  
 
 ### max・min：最大値・最小値  
 
