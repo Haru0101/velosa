@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>[JavaScript] 文字列型⇔数値型の変換 | velosa</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/velosa/img/favicon.png">
+    <meta name="description" content="Simple && Easy">
+    <link rel="preload" href="/velosa/assets/css/0.styles.e515b39e.css" as="style"><link rel="preload" href="/velosa/assets/js/app.96f1de88.js" as="script"><link rel="preload" href="/velosa/assets/js/2.98d68e92.js" as="script"><link rel="preload" href="/velosa/assets/js/3.8a971e73.js" as="script"><link rel="preload" href="/velosa/assets/js/17.8ec0350c.js" as="script"><link rel="prefetch" href="/velosa/assets/js/10.58633d4a.js"><link rel="prefetch" href="/velosa/assets/js/11.ee68e0f8.js"><link rel="prefetch" href="/velosa/assets/js/12.548b6046.js"><link rel="prefetch" href="/velosa/assets/js/13.a5d5d256.js"><link rel="prefetch" href="/velosa/assets/js/14.6def51b3.js"><link rel="prefetch" href="/velosa/assets/js/15.acde7db2.js"><link rel="prefetch" href="/velosa/assets/js/16.1e1dbb08.js"><link rel="prefetch" href="/velosa/assets/js/18.31093cf9.js"><link rel="prefetch" href="/velosa/assets/js/19.7a2f7343.js"><link rel="prefetch" href="/velosa/assets/js/20.18c1858f.js"><link rel="prefetch" href="/velosa/assets/js/21.c9f861f5.js"><link rel="prefetch" href="/velosa/assets/js/22.efb7990b.js"><link rel="prefetch" href="/velosa/assets/js/23.1064b645.js"><link rel="prefetch" href="/velosa/assets/js/24.debbc851.js"><link rel="prefetch" href="/velosa/assets/js/25.c24c5f0d.js"><link rel="prefetch" href="/velosa/assets/js/26.e7bb737d.js"><link rel="prefetch" href="/velosa/assets/js/27.954df2a5.js"><link rel="prefetch" href="/velosa/assets/js/28.3efea87a.js"><link rel="prefetch" href="/velosa/assets/js/29.cb35115c.js"><link rel="prefetch" href="/velosa/assets/js/30.edc5440c.js"><link rel="prefetch" href="/velosa/assets/js/31.06f427ef.js"><link rel="prefetch" href="/velosa/assets/js/4.cb080326.js"><link rel="prefetch" href="/velosa/assets/js/5.5fd30ea7.js"><link rel="prefetch" href="/velosa/assets/js/6.98a4fb2d.js"><link rel="prefetch" href="/velosa/assets/js/7.03c60eff.js"><link rel="prefetch" href="/velosa/assets/js/8.1f88aa9e.js"><link rel="prefetch" href="/velosa/assets/js/9.edd840e8.js">
+    <link rel="stylesheet" href="/velosa/assets/css/0.styles.e515b39e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/velosa/" class="home-link router-link-active"><img src="/velosa/img/img_logo.png" alt="velosa" class="logo"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/velosa/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/velosa/about/" class="nav-link">
+  About
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/velosa/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/velosa/about/" class="nav-link">
+  About
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>[JavaScript] 文字列型⇔数値型の変換</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/velosa/articles/javascript/convert-string-number.html#文字列型-→-数値型の変換" class="sidebar-link">文字列型 → 数値型の変換</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/velosa/articles/javascript/convert-string-number.html#数値型-→-文字列型の変換" class="sidebar-link">数値型 → 文字列型の変換</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="javascript-文字列型⇔数値型の変換"><a href="#javascript-文字列型⇔数値型の変換" class="header-anchor">#</a> [JavaScript] 文字列型⇔数値型の変換</h1> <p>JavaScriptは動的型付け言語なので、<br>
+変数の中身の型を気にせず書いてしまいがちです。</p> <p>その結果、意図しない型になっていて困ったことはないでしょうか。<br>
+そこで今回は頻出の文字列型⇔数値型の変換についてまとめました。</p> <h2 id="文字列型-→-数値型の変換"><a href="#文字列型-→-数値型の変換" class="header-anchor">#</a> 文字列型 → 数値型の変換</h2> <p><code>Number()</code>関数の引数に対象の変数を入れると、数値型に変換してくれます。<br> <code>typeof()</code>関数は型の種類を出力してくれる関数です。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> luckyNumber <span class="token operator">=</span> <span class="token string">'777'</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>luckyNumber<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 結果：&quot;string&quot;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token function">Number</span><span class="token punctuation">(</span>luckyNumber<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 結果：&quot;number&quot;</span>
+</code></pre></div><h2 id="数値型-→-文字列型の変換"><a href="#数値型-→-文字列型の変換" class="header-anchor">#</a> 数値型 → 文字列型の変換</h2> <p><code>String()</code>関数の引数に対象の変数を入れると、文字列型に変換してくれます。<br>
+こちらも先ほどと同様に<code>typeof()</code>を用いて型の種類を出力しています。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> luckyNumber <span class="token operator">=</span> <span class="token number">777</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>luckyNumber<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 結果：&quot;number&quot;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>luckyNumber<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 結果：&quot;string&quot;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2020-5-25 7:42:48</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/velosa/assets/js/app.96f1de88.js" defer></script><script src="/velosa/assets/js/2.98d68e92.js" defer></script><script src="/velosa/assets/js/3.8a971e73.js" defer></script><script src="/velosa/assets/js/17.8ec0350c.js" defer></script>
+  </body>
+</html>
