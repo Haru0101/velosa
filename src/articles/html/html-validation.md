@@ -72,11 +72,49 @@ JavaScriptやPHPで使うような正規表現がHTMLで使えるようになり
 動作保証すべきブラウザを再確認してくださいね。  
 
 ### maxlength・minlength：最大・最小大文字数  
+<p class="codepen" data-height="213" data-theme-id="light" data-default-tab="html,result" data-user="haru0101" data-slug-hash="PoZQoQz" style="height: 213px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="maxlength、minlength">
+  <span>See the Pen <a href="https://codepen.io/haru0101/pen/PoZQoQz">
+  maxlength、minlength</a> by Haru (<a href="https://codepen.io/haru0101">@haru0101</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+```html
+<form>
+  <input maxlength="10" minlength="5">
+  <button>送信</button>
+</form>
+```
+
+最大文字数と最小文字数を指定できます。  
+max、min属性が最大値と最小値の指定でしたが、こちらは『文字数』の指定です。  
+
+今回は最大文字数が10、最小文字数が5なので、『あいう』とか3文字だけ入力して送信するとエラーが出ます。  
+半角も全角もどちらも1文字ずつカウントされます。  
+（『あいう』も『aiu』もどっちも3文字とカウント）  
 
 ### step：入力単位の設定  
+<p class="codepen" data-height="218" data-theme-id="light" data-default-tab="html,result" data-user="haru0101" data-slug-hash="BajYaxp" style="height: 218px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="step属性">
+  <span>See the Pen <a href="https://codepen.io/haru0101/pen/BajYaxp">
+  step属性</a> by Haru (<a href="https://codepen.io/haru0101">@haru0101</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+```html
+<form>
+  <input type="number" step="5">
+  <button>送信</button>
+</form>
+```
+
+入力単位を設定できます。今回は5刻みです。  
+なので、12とか、11とか、5の倍数ではない数値を入力するとエラーが出ます。  
 
 ## まとめ  
 HTMLである程度バリデーションできると言っても、  
 ブラウザごとに差異がありますので、あくまでJSやバックエンド言語でのバリデーションを主として考えてください。  
 HTMLでのバリデーションは補助的な役割です。  
+
+ですが、お手軽にリアルタイムでエラーが出せるバリデーションを実装できるので、  
+上手く活用していきましょう。  
