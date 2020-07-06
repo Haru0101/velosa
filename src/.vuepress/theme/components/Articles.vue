@@ -24,6 +24,12 @@
                 <Categories :pages="this.$site.pages" prefix="/articles/uiux" />
             </div>
         </div>
+        <div class="category__list-wrap">
+            <div class="category__list-inner">
+                <h2>Others</h2>
+                <Categories :pages="this.$site.pages" prefix="/articles/others" />
+            </div>
+        </div>
     </div>
 </template>
 
