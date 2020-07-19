@@ -20,8 +20,8 @@
         </div>
         <div class="category__list-wrap">
             <div class="category__list-inner">
-                <h2>UI/UX</h2>
-                <Categories :pages="this.$site.pages" prefix="/articles/uiux" />
+                <h2>Vue.js</h2>
+                <Categories :pages="this.$site.pages" prefix="/articles/vuejs" />
             </div>
         </div>
         <div class="category__list-wrap">
