@@ -11,9 +11,9 @@ module.exports = {
         [
             '@vuepress/google-analytics',
             {
-              'ga': 'UA-136957501-2'
+                'ga': 'UA-136957501-2'
             }
-          ]
+        ]
     ],
     head: [
         ['link', {
@@ -31,6 +31,10 @@ module.exports = {
             {
                 text: 'About',
                 link: '/about/'
+            },
+            {
+                text: 'GitHub',
+                link: 'https://github.com/haru0101'
             }
         ],
         lastUpdated: 'Last Updated'
