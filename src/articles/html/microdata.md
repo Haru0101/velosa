@@ -8,7 +8,7 @@ HTMLのタグの中に組み込むのが特徴で、
 そんなに仕様は複雑ではありません。  
 
 構造化データについては別の記事にまとめていますので、そちらをご覧ください。  
-[リンクテキスト](リンクURL)  
+[構造化データ？セマンティクス？フロントエンドエンジニアに求められるモダンなHTMLマークアップとは](https://haru0101.github.io/velosa/articles/html/structured-data.html)  
 
 ## Microdataの文法  
 では早速Microdataの書き方を見ていきましょう。  
