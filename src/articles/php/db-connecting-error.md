@@ -19,4 +19,4 @@ phpMyAdminから使用するDBを選択します。
 ここの設定でDBを操作する権限が付与されていないために、エラーが出ます。  
 基本的にはすべてにチェックを入れてユーザーに権限を付与しましょう。  
 
-![privilegesの設定を変更する](docs/img/img-article/privileges_setting.png)   
+![privilegesの設定を変更する](/img/change-privileges-setting.png)   
