@@ -48,7 +48,6 @@
                 <Categories :pages="this.$site.pages" prefix="/articles/laravel" />
             </div>
         </div> -->
-        
         <div class="category__list-wrap">
             <div class="category__list-inner">
                 <h2>Others</h2>
