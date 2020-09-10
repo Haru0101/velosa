@@ -24,10 +24,16 @@
                 <Categories :pages="this.$site.pages" prefix="/articles/vuejs" />
             </div>
         </div>
-        <div class="category__list-wrap">
+        <!-- <div class="category__list-wrap">
             <div class="category__list-inner">
                 <h2>PHP</h2>
                 <Categories :pages="this.$site.pages" prefix="/articles/php" />
+            </div>
+        </div> -->
+        <div class="category__list-wrap">
+            <div class="category__list-inner">
+                <h2>WordPress</h2>
+                <Categories :pages="this.$site.pages" prefix="/articles/wordpress" />
             </div>
         </div>
         <div class="category__list-wrap">
@@ -41,13 +47,8 @@
                 <h2>Laravel</h2>
                 <Categories :pages="this.$site.pages" prefix="/articles/laravel" />
             </div>
-        </div>
-        <div class="category__list-wrap">
-            <div class="category__list-inner">
-                <h2>WordPress</h2>
-                <Categories :pages="this.$site.pages" prefix="/articles/wordpress" />
-            </div>
         </div> -->
+        
         <div class="category__list-wrap">
             <div class="category__list-inner">
                 <h2>Others</h2>
