@@ -11,7 +11,7 @@ WordPressのループ等を使用しないページを固定ページにしま�
 
 ### 管理画面で固定ページを作成する  
 まずはWordPressの管理画面から、固定ページを作成します。  
-![WordPressの管理画面からページを追加する](/public/img/実際のWordPressの管理画面.png)  
+![WordPressの管理画面からページを追加する](public/img/実際のWordPressの管理画面.png)  
 一度、公開し、その後にパーマリンクを変更します。  
 パーマリンクはページにアクセスするURLになるので、よく考えて設定しましょう。  
 
@@ -33,4 +33,4 @@ https://自分のサイトのアドレス/about
 
 上記のアドレスにアクセスすれば作成した内容が見れるはずです。  
 
-![実際のWordPressの管理画面](/public/img/実際のWordPressの管理画面.png)  
+![実際のWordPressの管理画面](public/img/実際のWordPressの管理画面.png)  
