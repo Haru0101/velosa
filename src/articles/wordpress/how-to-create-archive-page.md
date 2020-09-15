@@ -1,10 +1,54 @@
-# ループさせるならarchiveページ！作成方法の基本をキッチリ押さえよう  
+# ループさせるならarchiveページ！作成方法の基本をキッチリ押さえよう
 
-## まずはヘッダーとフッターを読み込む  
+## まずはヘッダーとフッターを読み込む
 
-## ループを作成する  
+アーカイブページにも、きっとヘッダーとフッターは必要でしょうから、
+まず読み込みましょう。
 
-## プラグイン『CPT UI』を使う  
+今回はarchive-posts-list.phpというファイルを準備してそこに記述しました。  
 
-## ブラウザで確認する  
+```php
+<?php get_header(); ?>
+<?php get_footer(); ?>
+```
 
+## ループを作成する
+
+今回は普通の投稿を10件表示しますが、  
+場合によってカテゴリや件数をカスタマイズしてみてください。  
+
+```php
+<?php
+    $args = array(
+        'posts_per_page' => 10, // 表示件数の指定
+    );
+    $posts = get_posts($args); ?>
+<?php if (have_posts()) : ?>
+<?php  foreach ($posts as $post): // ループの開始
+  setup_postdata($post); // 記事データの取得?>
+<?php while ( have_posts() ) : the_post(); ?>
+// 内容
+<?php endwhile; ?>
+<?php endforeach; ?>
+<?php wp_reset_postdata(); ?>
+<?php endif; ?>
+```
+
+ループまで作成しましたが、これだけでは表示されません。  
+管理画面からアーカイブページが見れるようにしましょう。  
+
+## プラグイン『Custom Post Type UI』を使う  
+一応プラグインなしでもできますが、functions.phpを編集する必要があり、  
+初心者向けではないので今回はプラグインを使いましょう。  
+
+カスタム投稿タイプを作成するのですが、『Custom Post Type UI』という非常に有名なプラグインがあります。  
+検索するとすぐ出てくるので、早速インストールしてページを作成しましょう。  
+
+『Custom Post Type UI』の使い方は以下を参考にしてください。  
+※投稿タイプ作成時にhas archiveをtrueにするのだけは忘れないでくださいね。  
+
+[カスタム投稿タイプを簡単に作成できる「Custom Post Type UI」の使い方！](https://haniwaman.com/custom-post-type-ui/)  
+
+## ブラウザで確認する
+カスタム投稿のスラッグがファイル名と一致していれば、ブラウザで確認することができます。  
+今回なら、archive-posts-list.phpというファイル名で、Custom Post Type UIで作成した投稿タイプのスラッグはposts-listです。  
