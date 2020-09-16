@@ -14,24 +14,24 @@
 
 ## ループを作成する
 
-今回は普通の投稿を10件表示しますが、  
-場合によってカテゴリや件数をカスタマイズしてみてください。  
+今回は普通の投稿10件のタイトルを表示しますが、  
+場合によってカテゴリを絞ったり、件数を増やしたり、タイトルだけじゃなく内容や投稿日を出力したり、  
+いろいろカスタマイズしてみてください。  
 
 ```php
 <?php
+    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
     $args = array(
-        'posts_per_page' => 10, // 表示件数の指定
+        'paged' => $paged,
+        'posts_per_page' => 10, // 表示件数
     );
-    $posts = get_posts($args); ?>
-<?php if (have_posts()) : ?>
-<?php  foreach ($posts as $post): // ループの開始
-  setup_postdata($post); // 記事データの取得?>
-<?php while ( have_posts() ) : the_post(); ?>
+    $query = new WP_Query($args);
+?>
+<?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 // 内容
-<?php endwhile; ?>
-<?php endforeach; ?>
+<?php the_title(); ?> // タイトルを出力する
+<?php endwhile; endif; ?>
 <?php wp_reset_postdata(); ?>
-<?php endif; ?>
 ```
 
 ループまで作成しましたが、これだけでは表示されません。  
