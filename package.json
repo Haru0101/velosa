@@ -13,10 +13,11 @@
   },
   "dependencies": {
     "elliptic": "^6.5.3",
+    "node-forge": ">=0.10.0",
     "node-sass": "^4.14.1",
-    "sass": "^1.26.10",
+    "prismjs": "1.21.0",
+    "sass": "^1.26.11",
     "sass-loader": "^8.0.2",
-    "websocket-extensions": "^0.1.4",
-    "prismjs": "1.21.0"
+    "websocket-extensions": "^0.1.4"
   }
 }
