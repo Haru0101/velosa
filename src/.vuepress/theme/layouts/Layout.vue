@@ -118,7 +118,7 @@ export default {
   mounted () {
       const books = ['📓','📔','📒','📕','📗','📘','📙'];
 
-      const loop = (arr, count = 0, time = 750) => {
+      const loop = (arr, count = 0, time = 500) => {
         location.hash = arr[count % arr.length];
         setTimeout(loop.bind(this, arr, count + 1, time), time);
       };
