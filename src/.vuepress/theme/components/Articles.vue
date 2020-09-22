@@ -36,12 +36,6 @@
                 <Categories :pages="this.$site.pages" prefix="/articles/wordpress" />
             </div>
         </div>
-        <div class="category__list-wrap">
-            <div class="category__list-inner">
-                <h2>Book review</h2>
-                <Categories :pages="this.$site.pages" prefix="/articles/bookreview" />
-            </div>
-        </div>
         <!-- <div class="category__list-wrap">
             <div class="category__list-inner">
                 <h2>Laravel</h2>
