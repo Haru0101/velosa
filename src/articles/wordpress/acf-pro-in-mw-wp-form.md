@@ -23,10 +23,10 @@ add_filter( 'mwform_choices_mw-wp-form-XXX', 'add_fruits', 10, 2 );
 
 
 ### 注意点  
-get_sub_fieldがthe_sub_fieldになっていて、
-それだけで3時間費やした。要注意。
+get_sub_fieldがthe_sub_fieldになっていて、  
+それだけで3時間費やした。要注意。  
 
-そして、これはACF PROの繰り返しフィールドを使用している。
-もちろん無料版ACFでどうこうしたい場合にも使える。
-その場合も、the_fieldとget_fieldの違いには注意。
-文字として出力するときだけthe_XXXを使用する。
+そして、これはACF PROの繰り返しフィールドを使用しています。  
+もちろん無料版ACFでどうこうしたい場合にも使えます。  
+その場合も、the_fieldとget_fieldの違いには注意。  
+文字として出力するときだけthe_fieldを使用。  
