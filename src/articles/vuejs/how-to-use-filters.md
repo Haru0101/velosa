@@ -74,3 +74,35 @@ dataなどを整形するときに用います。
     })
 </script>
 ```
+
+## グローバルフィルタについて  
+今まで定義したのはローカルフィルタであり、コンポーネント内でしか参照することができません。  
+どのコンポーネントからも参照できるようにするには、グローバルフィルタを定義する必要があります。  
+呼び出し方は一緒ですが、定義の仕方が違います。  
+
+ポイントは、Vueの読み込みのあと、かつ、インスタンス化の前です。  
+
+## 書き方  
+```html
+<div id="app">
+    <h2>消費税込み価格</h2>
+    <!-- 第1引数のpriceは省略できる -->
+    <!-- 第2引数のtaxRateから指定する -->
+    <p>{{ price | includedTax(1.1) }}</p>
+    <!-- 結果：1100 -->
+</div>
+```
+```vue
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.filter('includedTax', function(price){
+        return price * 1.1
+    })
+    var app = new Vue({
+        el: '#app',
+        data: {
+            price: 1000
+        }
+    })
+</script>
+```
